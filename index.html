@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>House Decoration Website</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="left-col">
+                <img src="./img/logo.png" class="logo" alt="">
+                <div class="content">
+                    <h1>Add plants to your living space</h1>
+                    <p>Plants are an inexpensive means to eccessorizing your space and adding color and texture.</p>
+
+                    <button type="button"> LEARN MORE
+
+                    </button>
+                </div>
+            </div>
+
+            <div class="right-col">
+                <div class="slider">
+                    <img src="./img/pic-1.jpg" alt="" id="slide">
+                </div>
+                <div class="slider-content">
+                    <h2>Where can I find ideas for small rooms?</h2>
+                    <hr>
+                    <p>They can absord pollutants and remove harmful gases
+                        from the air. No home <br>should be without these wonderful greens!
+                        Designing smalll room comes<br> with a completely different challenges.
+                    </p>
+                    <div class="controller">
+                        <img src="./img/back.png" alt="" id="back-btn">
+                        <div class="vertical-line">
+
+                        </div>
+                        <img src="./img/next.png" alt="" id="next-btn">
+                    </div>
+                </div>
+            </div>
+        </div>
+    <script>
+        var slider=document.getElementById("slide");
+        var backBtn=document.getElementById("back-btn");
+        var nextBtn=document.getElementById("next-btn");
+
+        var sildeimages=new Array(
+            "./img/pic-1.jpg",
+            "./img/pic-2.jpg",
+            "./img/pic-3.jpg",
+            "./img/pic-4.jpg",
+        );
+        let i=0;
+        nextBtn.onclick = function(){
+            if(i<3){
+                slider.src=sildeimages[i+1];
+                i++;
+            }
+        }
+        backBtn.onclick = function(){
+            if(i>0){
+                slider.src=sildeimages[i+1];
+                i--;
+            }
+        }
+    </script>
+    </body>
+</html>
